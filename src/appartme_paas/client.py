@@ -2,8 +2,8 @@ import logging
 from typing import Any, Dict, Optional
 
 import aiohttp
-from .const import DEFAULT_API_URL
 
+from .const import DEFAULT_API_URL
 from .exceptions import (
     DeviceOfflineError,
     ApiError,
