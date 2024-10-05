@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="appartme_paas",
-    version="0.1.0",
+    version="0.1.1",
     author="Miłosz Dębiński",
     author_email="milosz.debinski@appartme.com",
     description="Python client library for Appartme PaaS API",

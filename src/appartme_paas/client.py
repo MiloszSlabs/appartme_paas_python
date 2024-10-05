@@ -21,7 +21,7 @@ class AppartmePaasClient:
             access_token (str): OAuth2 access token.
             session (aiohttp.ClientSession, optional): aiohttp session.
         """
-        self.base_url = "https://api.appartme.com"  # Update with the actual API URL
+        self.base_url = "https://api-preprod.appartme.cloud/paasapi/v1"  # Update with the actual API URL
         self.access_token = access_token
         self.session = session or aiohttp.ClientSession()
 
