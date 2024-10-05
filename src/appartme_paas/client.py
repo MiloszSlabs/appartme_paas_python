@@ -2,6 +2,7 @@ import logging
 from typing import Any, Dict, Optional
 
 import aiohttp
+from .const import DEFAULT_API_URL
 
 from .exceptions import (
     DeviceOfflineError,
@@ -14,14 +15,20 @@ _LOGGER = logging.getLogger(__name__)
 class AppartmePaasClient:
     """Client for Appartme PaaS API."""
 
-    def __init__(self, access_token: str, session: Optional[aiohttp.ClientSession] = None):
+    def __init__(
+            self,
+            access_token: str,
+            session: Optional[aiohttp.ClientSession] = None,
+            api_url: Optional[str] = DEFAULT_API_URL
+            ):
         """Initialize the AppartmePaasClient.
 
         Args:
             access_token (str): OAuth2 access token.
             session (aiohttp.ClientSession, optional): aiohttp session.
+            api_url (str): URL address for Appartme PaaS API
         """
-        self.base_url = "https://api-preprod.appartme.cloud/paasapi/v1"  # Update with the actual API URL
+        self.base_url = api_url
         self.access_token = access_token
         self.session = session or aiohttp.ClientSession()
 
