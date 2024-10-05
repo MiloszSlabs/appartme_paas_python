@@ -6,3 +6,12 @@ A Python client library for interacting with the Appartme PaaS API.
 
 ```bash
 pip install appartme_paas
+```
+
+## Running Tests
+
+To run the tests, first install the development dependencies:
+
+```bash
+pip install -r requirements-dev.txt
+```
